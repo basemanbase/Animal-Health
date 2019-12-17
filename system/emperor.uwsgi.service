@@ -1,0 +1,13 @@
+
+[Unit]
+Description=uWSGI Emperor
+After=syslog.target
+
+[Service]
+WorkingDirectory= /home/pi/Desktop/Bingo
+ExecStart=/home/pi/Desktop/Bingo/venv/bin/uwsgi --ini lab_app_uwsgi.ini
+# Requires systemd version 211 or newer
+
+[Install]
+WantedBy=multi-user.target
+
